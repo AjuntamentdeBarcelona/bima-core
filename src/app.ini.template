@@ -1,0 +1,80 @@
+[Paths]
+APP_ROOT                  = /home/user/projects/bima-core/src
+STATIC_ROOT               = /tmp/bima-core-static
+MEDIA_ROOT                = /change/me/bima-core
+TEST_MEDIA_ROOT           = /change/me/bima-core/test
+
+[Logs]
+SENTRY_ENABLED            = False
+SENTRY_DSN                =
+LOG_LEVEL                 = DEBUG
+DJANGO_LOG_LEVEL          = WARNING
+; EXTRA_LOGGING           = boto3:INFO,botocore:INFO
+; LOG_FILE                = /var/logs/bima-core/bima-core.log
+
+[Database]
+DATABASE_USER           = change_me
+DATABASE_HOST           = change_me
+DATABASE_ENGINE         = postgresql
+DATABASE_NAME           = bima_coredb
+DATABASE_PORT           =
+DATABASE_PASSWORD       = change_me
+DATABASE_CONN_MAX_AGE   = 30
+
+TEST_DATABASE_USER      = change_me
+TEST_DATABASE_ENGINE    = postgresql
+TEST_DATABASE_HOST      = change_me
+TEST_DATABASE_NAME      = bima-core_test_db
+TEST_DATABASE_PORT      =
+TEST_DATABASE_PASSWORD  = change_me
+
+[Base]
+APP_SLUG                  = bima-core
+
+[Security]
+SECRET_KEY                = secret_key
+ALLOWED_HOSTS             = *
+
+[Debug]
+DEBUG                     = True
+TEMPLATE_DEBUG            = True
+ENABLE_DEBUG_TOOLBAR      = True
+
+[WhiteNoise]
+ENABLE_WHITENOISE = False
+
+[Cache]
+CACHE_TYPE              = redis
+REDIS_HOST              = localhost
+CACHE_REDIS_DB          = 1
+REDIS_PORT              = 6379
+CACHE_MAX_ENTRIES       = 10000
+CACHE_TIMEOUT           = 3600
+CACHE_PREFIX            = bima-core
+
+[Flickr]
+FLICKR_API_KEY          = change_me
+FLICKR_SECRET_KEY       = change_me
+
+[DrfChunkedUpload]
+DRF_CHUNKED_UPLOAD_MAX_BYTES = 104857600
+
+[AWS]
+DEFAULT_FILE_STORAGE = storages.backends.s3boto3.S3Boto3Storage
+AWS_STORAGE_BUCKET_NAME = change_me
+AWS_ACCESS_KEY_ID = change_me
+AWS_SECRET_ACCESS_KEY = change_me
+AWS_QUERYSTRING_AUTH = False
+AWS_DEFAULT_ACL = private
+AWS_LOCATION = bima-core
+THUMBOR_SERVER = change_me
+THUMBOR_MEDIA_URL = bima-core
+THUMBOR_SECURITY_KEY = change_me
+THUMBOR_UNSAFE = False
+THUMBOR_URL_REMOVE_UNSAFE = True
+THUMBOR_MEDIA_URL_PREFIX = s3
+
+GEOPOSITION_GOOGLE_MAPS_API_KEY = change_me
+
+[Constants]
+PHOTO_TYPES_ENABLED = True

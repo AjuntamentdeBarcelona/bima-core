@@ -1,0 +1,6 @@
+-r base.txt
+
+raven==5.32.0
+uWSGI==2.0.14
+uwsgi-tools==1.0.3
+elasticsearch==5.4.0
